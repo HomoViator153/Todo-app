@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .input {
   display: flex;
   width: 90%;
@@ -54,6 +60,7 @@
 
 .todos__single {
   display: flex;
+  justify-content: space-between;
   width: 29.5%;
   border-radius: 5px;
   padding: 20px;
@@ -68,8 +75,18 @@
   font-size: 20px;
 }
 
+input.todos__single--text {
+  padding-right: 0;
+  width: 10px;
+}
+
 .todos__single--text:focus {
   outline: none;
+}
+
+.icon__container {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .icon {

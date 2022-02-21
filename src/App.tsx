@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import InputField from "./components/InputField";
+import TodoList from "./components/TodoList";
 
 import { Todo } from "./models/todo";
 
@@ -8,8 +10,6 @@ import "./App.css";
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
-
-  console.log(todos);
 
   const handleAdd = (e: React.FormEvent<EventTarget>) => {
     e.preventDefault();
@@ -23,6 +23,7 @@ const App: React.FC = () => {
     <div className="App">
       <span className="heading">Taskify</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+      <TodoList todos={todos} setTodos={setTodos} />
     </div>
   );
 };

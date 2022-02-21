@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "../styles/inputField.css";
+import "../styles/styles.css";
 
 interface Props {
   todo: string;
